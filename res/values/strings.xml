@@ -12,8 +12,10 @@
     
     <string name="button_push">PUSH</string>
     <string name="button_get">GET</string>
+    <string name="button_update">UPDATE</string>
+    <string name="button_delete">DELETE</string>
     <string name="defalt_name">test</string>
     
-
+	<string name="runlog">waiting</string>
 	
 </resources>

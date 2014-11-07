@@ -81,4 +81,29 @@
         android:text="@string/text_input"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <Button
+        android:id="@+id/button_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_output"
+        android:text="@string/button_update" />
+
+    <Button
+        android:id="@+id/button_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_update"
+        android:layout_below="@+id/button_update"
+        android:text="@string/button_delete" />
+
+    <TextView
+        android:id="@+id/text_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_output"
+        android:layout_alignBottom="@+id/button_output"
+        android:layout_toRightOf="@+id/button_update"
+        android:text="@string/runlog"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
 </RelativeLayout>

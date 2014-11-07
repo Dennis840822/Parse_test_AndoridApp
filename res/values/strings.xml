@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Parse_test</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="text_input">INPUT</string>
+	<string name="text_output">OUTPUT</string>
+	<string name="text_name">NAME</string>
+    
+    
+    <string name="button_push">PUSH</string>
+    <string name="button_get">GET</string>
+    <string name="defalt_name">test</string>
+    
+
+	
+</resources>

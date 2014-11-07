@@ -17,7 +17,8 @@ import com.parse.ParseUser;
 public class MainActivity extends Activity 
 {
 	
-	private Button Button_push,Button_get,Button_update,Button_delete;
+	private Button Button_push,Button_get,Button_update,Button_delete,Button_display;
+	private Button Button_clear;
 	private EditText Text_push,Text_get,Text_name; 
 	private TextView run_log;
 	private String name_string;
@@ -43,12 +44,18 @@ public class MainActivity extends Activity
         Button_get = (Button)findViewById(R.id.button_output);
         Button_update = (Button)findViewById(R.id.button_update);
         Button_delete = (Button)findViewById(R.id.button_delete);
-
+        Button_display = (Button)findViewById(R.id.button_display);
+        Button_clear = (Button)findViewById(R.id.button_clear);
+        
+        
         Button_push.setOnClickListener(push_function);
         Button_get.setOnClickListener(get_function);
         Button_update.setOnClickListener(update_function);
         Button_delete.setOnClickListener(delete_function);
+        Button_display.setOnClickListener(display_function);
+        Button_clear.setOnClickListener(new Button.OnClickListener(){public void onClick(View v){Text_push.setText("");}});
     }
+
 	
 	private Button.OnClickListener push_function = new Button.OnClickListener ()
 	{
@@ -56,7 +63,7 @@ public class MainActivity extends Activity
 		{
 			long startTime = System.currentTimeMillis();
 			run_log.setText("Running push");
-			
+			//------------------------------------------------------------------
 			ParseObject testObject = new ParseObject("TestObject");
 			name_string = Text_name.getText().toString();
 			String test_string =  Text_push.getText().toString();
@@ -67,7 +74,7 @@ public class MainActivity extends Activity
 				testObject.put("String_1", test_string);
 				testObject.saveInBackground();				//push action
 			}
-			
+			//------------------------------------------------------------------
 			long totaltime = System.currentTimeMillis() - startTime;
 			run_log.setText("push total use "+totaltime+"ms");
 		}
@@ -80,7 +87,7 @@ public class MainActivity extends Activity
 		{
 			long startTime = System.currentTimeMillis();
 			run_log.setText("Running get");
-			
+			//-------------------------------------------------------------------------
 			ParseQuery<ParseObject> query = ParseQuery.getQuery("TestObject");
 			
 			//request   所引條件
@@ -106,8 +113,7 @@ public class MainActivity extends Activity
 						}
 				
 					});
-			
-			
+			//-------------------------------------------------------------------------
 			long totaltime = System.currentTimeMillis() - startTime;
 			run_log.setText("get total use "+totaltime+"ms");
 				
@@ -121,8 +127,7 @@ public class MainActivity extends Activity
 		{
 			long startTime = System.currentTimeMillis();
 			run_log.setText("Running update");
-			
-			
+			//-------------------------------------------------------------------------
 			ParseQuery<ParseObject> query = ParseQuery.getQuery("TestObject");
 			// Retrieve the object by id
 			query.getInBackground("tnwLUegyrK", new GetCallback<ParseObject>() 
@@ -143,7 +148,7 @@ public class MainActivity extends Activity
 							}
 						}
 					});
-			
+			//-------------------------------------------------------------------------
 			long totaltime = System.currentTimeMillis() - startTime;
 			run_log.setText("update total use "+totaltime+"ms");
 		
@@ -157,7 +162,7 @@ public class MainActivity extends Activity
 		{
 			long startTime = System.currentTimeMillis();
 			run_log.setText("Running delete");
-			
+			//----------------------------------------------------------------------------
 			ParseQuery<ParseObject> query = ParseQuery.getQuery("TestObject");
 			
 			//request   所引條件
@@ -181,9 +186,47 @@ public class MainActivity extends Activity
 						}
 				
 					});
-			
+			//------------------------------------------------------------------------------
 			long totaltime = System.currentTimeMillis() - startTime;
 			run_log.setText("delete total use "+totaltime+"ms");
+		
+		}
+	};
+	
+	private Button.OnClickListener display_function = new Button.OnClickListener ()
+	{
+		public void onClick(View v)  
+		{
+			long startTime = System.currentTimeMillis();
+			run_log.setText("Running display");
+			//----------------------------------------------------------------------------
+			ParseQuery<ParseObject> query = ParseQuery.getQuery("TestObject");
+			
+			//request   所引條件      //改成無條件全部顯示
+			//name_string = Text_name.getText().toString();
+			//query.whereEqualTo("User_name", name_string);
+			//
+			query.findInBackground(new FindCallback<ParseObject>()  //與線上同步資料
+					{
+						@Override
+						public void done(List<ParseObject> sList, ParseException e)   //資料會存於list中
+						{
+							if (e == null) 
+							{	
+								String output_string = new String("");
+								for(int i=0; i<sList.size(); i++)
+								{
+									output_string += sList.get(i).getString("User_name") + "   " + sList.get(i).getString("String_1") + "\n";
+								}
+								Text_get.setText(output_string);
+							} 
+							else {}
+						}
+				
+					});
+			//------------------------------------------------------------------------------
+			long totaltime = System.currentTimeMillis() - startTime;
+			run_log.setText("display total use "+totaltime+"ms");
 		
 		}
 	};

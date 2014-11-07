@@ -53,16 +53,6 @@
         android:text="@string/text_output"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="14dp"
-        android:text="@string/text_name"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
     <EditText
         android:id="@+id/text_name"
         android:layout_width="wrap_content"
@@ -81,29 +71,55 @@
         android:text="@string/text_input"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/text_name"
+        android:layout_alignParentTop="true"
+        android:text="@string/text_name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
     <Button
         android:id="@+id/button_update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button_output"
+        android:layout_below="@+id/text_output"
+        android:layout_toRightOf="@+id/button_output"
         android:text="@string/button_update" />
 
     <Button
         android:id="@+id/button_delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button_update"
-        android:layout_below="@+id/button_update"
+        android:layout_below="@+id/text_output"
+        android:layout_toRightOf="@+id/button_update"
         android:text="@string/button_delete" />
 
     <TextView
         android:id="@+id/text_log"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button_output"
-        android:layout_alignBottom="@+id/button_output"
-        android:layout_toRightOf="@+id/button_update"
+        android:layout_alignLeft="@+id/button_display"
+        android:layout_below="@+id/button_display"
         android:text="@string/runlog"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/button_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_output"
+        android:layout_alignRight="@+id/button_delete"
+        android:layout_below="@+id/button_output"
+        android:text="@string/button_display" />
+
+    <Button
+        android:id="@+id/button_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/text_input"
+        android:layout_toRightOf="@+id/text_input"
+        android:text="@string/button_clear" />
 
 </RelativeLayout>

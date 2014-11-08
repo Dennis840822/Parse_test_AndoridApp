@@ -11,7 +11,7 @@ import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
-import com.parse.ParseUser;
+//import com.parse.ParseUser;
 import android.os.Build;
 
 import android.media.AudioManager;
@@ -33,7 +33,7 @@ public class MainActivity extends Activity
 	private TextView run_log;
 	
 	private String model = Build.MODEL;
-	private String app_ver = "ver 1.1.2.1109";
+	private String app_ver = getString(R.string.version);
 	
 	private MediaPlayer mPlayer;
 
@@ -45,7 +45,7 @@ public class MainActivity extends Activity
         
         //init for parse
         Parse.initialize(this, "JDvr3ElOQ3pYXlBqT1twQHx3XvGmpO37XlROoThG", "ISLvJ6xMzRkcpZRi3i3aCNTbAflt9hDl5cERONGP");
-        ParseUser.enableAutomaticUser();
+        //ParseUser.enableAutomaticUser();
         // ParseACL defaultACL = new ParseACL();
         //        
         Text_name =(EditText)findViewById(R.id.text_name);
@@ -315,6 +315,13 @@ public class MainActivity extends Activity
 			run_log.setText("Display done for"+totaltime+"(ms)");
 		}
 	};
+	
+	@Override
+    protected void onDestroy() {
+       if(mPlayer != null)
+    	   mPlayer.release();
+       super.onDestroy();
+    }
 	
 
 }

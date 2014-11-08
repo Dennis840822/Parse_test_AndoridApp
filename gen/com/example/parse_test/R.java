@@ -60,22 +60,23 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f060002;
         public static final int app_name=0x7f060000;
-        public static final int button_clear=0x7f060010;
-        public static final int button_delete=0x7f06000e;
-        public static final int button_display=0x7f06000f;
-        public static final int button_get=0x7f06000b;
-        public static final int button_get2=0x7f06000c;
-        public static final int button_push=0x7f06000a;
-        public static final int button_update=0x7f06000d;
-        public static final int defalt_name=0x7f060004;
+        public static final int button_clear=0x7f060011;
+        public static final int button_delete=0x7f06000f;
+        public static final int button_display=0x7f060010;
+        public static final int button_get=0x7f06000c;
+        public static final int button_get2=0x7f06000d;
+        public static final int button_push=0x7f06000b;
+        public static final int button_update=0x7f06000e;
+        public static final int defalt_name=0x7f060005;
         public static final int hello_world=0x7f060001;
-        public static final int runlog=0x7f060011;
-        public static final int text_input=0x7f060005;
-        public static final int text_input2=0x7f060006;
-        public static final int text_name=0x7f060003;
-        public static final int text_output=0x7f060007;
-        public static final int text_output2=0x7f060008;
-        public static final int text_output3=0x7f060009;
+        public static final int runlog=0x7f060012;
+        public static final int text_input=0x7f060006;
+        public static final int text_input2=0x7f060007;
+        public static final int text_name=0x7f060004;
+        public static final int text_output=0x7f060008;
+        public static final int text_output2=0x7f060009;
+        public static final int text_output3=0x7f06000a;
+        public static final int version=0x7f060003;
     }
     public static final class style {
         /** 

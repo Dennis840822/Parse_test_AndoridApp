@@ -178,7 +178,7 @@
         	android:id="@+id/text_log"
        		android:layout_width="wrap_content"
         	android:layout_height="wrap_content"
-        	android:text="@string/runlog"
+        	android:text="@string/version"
         	android:textAppearance="?android:attr/textAppearanceMedium" />
 	</TableRow>
 </TableLayout>

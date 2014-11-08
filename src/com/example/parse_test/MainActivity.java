@@ -14,6 +14,9 @@ import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import android.os.Build;
 
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+
 
 
 public class MainActivity extends Activity 
@@ -28,7 +31,11 @@ public class MainActivity extends Activity
 	private EditText Text_get,Text_get2,Text_get3;
 	
 	private TextView run_log;
-	private String model = Build.MODEL + "__" + Build.FINGERPRINT;
+	
+	private String model = Build.MODEL;
+	private String app_ver = "ver 1.1.2.1109";
+	
+	private MediaPlayer mPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) 
@@ -74,6 +81,12 @@ public class MainActivity extends Activity
         		Text_push.setText("");
         		Text_push2.setText("");
         	}});
+        
+        
+        mPlayer = MediaPlayer.create(this, R.raw.sm23883589);
+        mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+        mPlayer.setLooping(true);
+        mPlayer.start();
     }
 
 	
@@ -87,10 +100,10 @@ public class MainActivity extends Activity
 			ParseObject testObject = new ParseObject("TestObject");
 			if(!Text_name.getText().toString().equals("") && !Text_push.getText().toString().equals(""))  // no null
 			{
-				
 				testObject.put("User_name", Text_name.getText().toString());
 				testObject.put("String_1", Text_push.getText().toString());
 				testObject.put("Phone_model",model);
+				testObject.put("APP_version",app_ver);
 				testObject.saveInBackground();				//push action
 			}
 			Text_push2.setText(testObject.getObjectId());
@@ -215,6 +228,7 @@ public class MainActivity extends Activity
 									{
 										testObject.put("String_1", Text_push.getText().toString());
 										testObject.put("Phone_model",model);
+										testObject.put("APP_version",app_ver);
 										testObject.saveInBackground();
 									}
 								}
@@ -258,7 +272,6 @@ public class MainActivity extends Activity
 			//------------------------------------------------------------------------------
 			long totaltime = System.currentTimeMillis() - startTime;
 			run_log.setText("Delete done for"+totaltime+"(ms)");
-		
 		}
 	};
 	

@@ -5,19 +5,29 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     
-    <string name="text_input">INPUT</string>
-	<string name="text_output">OUTPUT</string>
-	<string name="text_name">NAME</string>
     
+	<string name="text_name">NAME :</string>
+	<string name="defalt_name">test</string>
+	
+    <string name="text_input">String</string>
+    <string name="text_input2">ID</string>
     
-    <string name="button_push">PUSH</string>
-    <string name="button_get">GET</string>
-    <string name="button_update">UPDATE</string>
-    <string name="button_delete">DELETE</string>
-    <string name="button_display">Display all data</string>
+	<string name="text_output">Name</string>
+    <string name="text_output2">Data</string>
+	<string name="text_output3">ID</string>
+	
+    <string name="button_push">Push data</string>
+    <string name="button_get">Search name</string>
+    <string name="button_get2">Find name+St</string>
+    
+    <string name="button_update">Upadate id</string>
+    <string name="button_delete">Delete name</string>
+    <string name="button_display">Display data</string>
+    
     <string name="button_clear">C</string>
     
-    <string name="defalt_name">test</string>
+    
+    
     
 	<string name="runlog">waiting</string>
 	

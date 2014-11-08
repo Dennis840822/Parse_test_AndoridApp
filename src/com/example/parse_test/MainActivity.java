@@ -28,7 +28,7 @@ public class MainActivity extends Activity
 	private EditText Text_get,Text_get2,Text_get3;
 	
 	private TextView run_log;
-	private String model = Build.MODEL;
+	private String model = Build.MODEL + "__" + Build.FINGERPRINT;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) 

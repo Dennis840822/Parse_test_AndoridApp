@@ -16,14 +16,16 @@
         	android:id="@+id/textView3"
         	android:layout_width="wrap_content"
         	android:layout_height="wrap_content"
-        	android:layout_weight="1"
+			android:layout_weight="1"
         	android:text="@string/text_name"
         	android:textAppearance="?android:attr/textAppearanceLarge" />
+    </TableRow>
+    <TableRow>
     	<EditText
         	android:id="@+id/text_name"
         	android:layout_width="wrap_content"
         	android:layout_height="wrap_content"
-        	android:layout_weight="1"
+			android:layout_weight="1"
         	android:inputType="text"
         	android:ems="10"
         	android:text="@string/defalt_name" />
@@ -50,19 +52,25 @@
 	<TableRow>
     	<EditText
        		android:id="@+id/text_input"
-
-			android:layout_weight="3"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+			android:layout_weight="1"
        	 	android:inputType="text"
         	android:ems="10" />
     	<EditText
        		android:id="@+id/text_input2"
-
-			android:layout_weight="2"
+			android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+			android:layout_weight="1"
         	android:inputType="text"
         	android:ems="10" />
+    </TableRow>
+    
+	<TableRow>
     	<Button
     	    android:id="@+id/button_clear"
-
+			android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
     	    android:layout_weight="1"
     	    android:minHeight="30dp"
     	    android:text="@string/button_clear" />

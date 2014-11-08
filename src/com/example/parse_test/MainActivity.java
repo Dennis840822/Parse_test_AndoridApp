@@ -12,6 +12,7 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
+import android.os.Build;
 
 
 
@@ -27,6 +28,7 @@ public class MainActivity extends Activity
 	private EditText Text_get,Text_get2,Text_get3;
 	
 	private TextView run_log;
+	private String model = Build.MODEL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) 
@@ -88,7 +90,7 @@ public class MainActivity extends Activity
 				
 				testObject.put("User_name", Text_name.getText().toString());
 				testObject.put("String_1", Text_push.getText().toString());
-				//testObject.put("Android_id",android_id);
+				testObject.put("Phone_model",model);
 				testObject.saveInBackground();				//push action
 			}
 			Text_push2.setText(testObject.getObjectId());
@@ -212,7 +214,7 @@ public class MainActivity extends Activity
 									if(!Text_push.getText().toString().equals(""))
 									{
 										testObject.put("String_1", Text_push.getText().toString());
-										//testObject.put("Android_id",android_id);
+										testObject.put("Phone_model",model);
 										testObject.saveInBackground();
 									}
 								}

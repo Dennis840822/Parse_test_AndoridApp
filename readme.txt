@@ -7,7 +7,26 @@
 ░▒ ░       ▒   ▒▒ ░  ░▒ ░ ▒░░ ░▒  ░ ░ ░ ░  ░
 ░░         ░   ▒     ░░   ░ ░  ░  ░     ░   
                ░  ░   ░           ░     ░  ░
-                                                
+Parse_test ver1.2.0              made by Murakumo
+
+Method:               
+Push Data : To push a new data to parse with name,data.
+Display Data : To display all of the data on parse.
+Search Name : To search data with the same name , and you can use multiple keyword.
+Search Data : To search data with any data have the substring you had input.
+Update : To update the data by id.
+Delete : To delete the data which you have display or search last time.
+
+
+Version information:
+
+parse_test ver1.2.0 workshop education version
+GUI optimizing.
+Added search block to input search info.
+Update 2 search button.
+Update delete button.
+Added methods in readme file.
+Stopped updating parse_test before workshop.
 
 parse_test ver1.1.3 updated
 Put the version info on GUI.
@@ -44,3 +63,24 @@ Added delete button to delete all data with the same name you had input.
 parse_test ver1.0.0 released
 Added push button to push "name" and "String_1" on parse.
 Added get button to get all data with the same name you had input.
+
+
+Note Block:
+
+Account
+my_app
+testObject
+query
+parseobject
+
+objectId: "xWMyZ4YEGZ", User_name: test , String_1 : "eryt", createdAt:"2011-06-10T18:33:42Z", updatedAt:"2011-06-10T18:33:42Z"
+String
+Number
+Boolean
+Array  (List)
+Date
+Object
+Bytes
+File
+Null
+

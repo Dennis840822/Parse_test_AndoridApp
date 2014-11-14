@@ -67,14 +67,16 @@ public final class R {
         public static final int button_search1=0x7f06000a;
         public static final int button_search2=0x7f06000b;
         public static final int button_update=0x7f06000c;
+        public static final int col_1=0x7f060010;
+        public static final int col_2=0x7f060011;
         public static final int defalt_name=0x7f060008;
         public static final int hello_world=0x7f060001;
+        public static final int table_name=0x7f06000f;
         public static final int text_data=0x7f060005;
         public static final int text_id=0x7f060006;
         public static final int text_name=0x7f060004;
         public static final int text_search=0x7f060007;
         public static final int text_title=0x7f060003;
-        public static final int version=0x7f06000f;
     }
     public static final class style {
         /** 

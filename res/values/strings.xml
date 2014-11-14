@@ -19,8 +19,10 @@
     <string name="button_update">Upadate</string>
     <string name="button_delete">Delete</string>
     <string name="button_display">Display Data</string>
-    
-    <string name="version">ver.1.2.0</string>
 
+    <string name="table_name">TestObject</string>
+    <string name="col_1">User_name</string>
+    <string name="col_2">String_1</string>
+    
 	
 </resources>
